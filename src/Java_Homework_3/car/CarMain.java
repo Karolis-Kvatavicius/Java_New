@@ -3,15 +3,10 @@ package Java_Homework_3.car;
     public class CarMain {
         public static void main(String[] args) {
             Car[] cars = new Car[5];
-
             for (int i = 0; i < cars.length; i++) {
                 int j = i + 1;
-                cars[i] = new Car("name" + j, (i % 2 == 0) ? "manual" : "automatic", j * 50) {
-                    @Override
-                    public String getFuelType(String fuelType) {
-                        return null;
-                    }
-                };
+//                cars[i] = new Car("name" + j, (i % 2 == 0) ? "manual" : "automatic", j * 50);
+
             }
 
             for (Car c : cars) {
