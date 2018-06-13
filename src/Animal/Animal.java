@@ -1,4 +1,4 @@
-package Java_Homework_3.Animal;
+package Animal;
 
 public abstract class Animal implements Iterable {
     private int body;
@@ -9,7 +9,9 @@ public abstract class Animal implements Iterable {
         this.hasBrain = hasBrain;
     }
 
-    abstract String getType();
+    String getType() {
+        return null;
+    }
 
     public Animal() {
     }
@@ -21,4 +23,5 @@ public abstract class Animal implements Iterable {
     public boolean getBrain() {
         return hasBrain;
     }
+
 }

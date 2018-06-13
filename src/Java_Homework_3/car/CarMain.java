@@ -6,7 +6,12 @@ package Java_Homework_3.car;
 
             for (int i = 0; i < cars.length; i++) {
                 int j = i + 1;
-                cars[i] = new Car("name" + j, (i % 2 == 0) ? "manual" : "automatic", j * 50);
+                cars[i] = new Car("name" + j, (i % 2 == 0) ? "manual" : "automatic", j * 50) {
+                    @Override
+                    public String getFuelType(String fuelType) {
+                        return null;
+                    }
+                };
             }
 
             for (Car c : cars) {
@@ -23,15 +28,20 @@ package Java_Homework_3.car;
         }
     }
 
-    class Car {
+   abstract class Car {
         final static int MIN_SPEED = 0;
         final static String MANUAL = "manual";
         final static String AUTOMATIC = "automatic";
+        final static String DIESEL = "diesel";
+        final static String PETROL = "petrol";
         static String staticName = "static";
 
         private String name;
         private String gearBox;
         private int maxSpeed;
+        private String make;
+        private String model;
+
 
         public Car(String name, String gearBox, int maxSpeed) {
             this.name = name;
@@ -77,4 +87,6 @@ package Java_Homework_3.car;
                 this.maxSpeed = maxSpeed;
             }
         }
-    }
+
+       public abstract String getFuelType(String fuelType);
+   }

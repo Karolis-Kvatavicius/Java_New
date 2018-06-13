@@ -1,4 +1,4 @@
-package Java_Homework_3.Animal;
+package Animal;
 
 interface AnimalI {
     String getType();
