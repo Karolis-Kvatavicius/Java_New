@@ -5,7 +5,7 @@ class Circle extends Shape {
 
     Circle(double radius) {
         if (radius <= 0) {
-            System.out.println("Invalid values!");
+            System.out.println("Invalid values for a circle!");
             System.out.println("Assigning default radius of 1");
             this.radius = 1;
         } else {
