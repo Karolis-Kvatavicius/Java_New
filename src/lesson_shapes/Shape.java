@@ -1,8 +1,8 @@
 package lesson_shapes;
 
-abstract class Shape {
+interface Shape {
 
-    abstract double area();
+    double area();
 
-    abstract double perimeter();
+    double perimeter();
 }

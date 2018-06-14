@@ -1,6 +1,6 @@
 package lesson_shapes;
 
-class Circle extends Shape {
+class Circle implements Shape {
     private double radius;
 
     Circle(double radius) {
@@ -18,12 +18,12 @@ class Circle extends Shape {
     }
 
     @Override
-    double area() {
+    public double area() {
         return Math.PI * Math.pow(radius, 2);
     }
 
     @Override
-    double perimeter() {
+    public double perimeter() {
         return 2 * Math.PI * radius;
     }
 
