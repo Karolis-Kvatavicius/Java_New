@@ -6,7 +6,7 @@ class Rectangle extends Shape {
 
     Rectangle(double x, double y) {
         if (x <= 0 || y <= 0) {
-            System.out.println("\nInvalid values!");
+            System.out.println("Invalid values!");
             System.out.println("Assigning default values... [1, 1]");
             this.x = 1;
             this.y = 1;
