@@ -6,13 +6,22 @@ package lesson_shapes;
         private double c;
 
         Triangle(double a, double b, double c) {
-            if (a + b <= c || a + c <= b || c + b <= a || a <= 0 || b <= 0 || c <= 0) {
+            if (a <= 0 || b <= 0 || c <= 0) {
                 System.out.println("Invalid values!");
                 System.out.println("Assigning default values of [1, 1, 1]");
                 this.a = 1;
                 this.b = 1;
                 this.c = 1;
-            } else {
+
+            } else if(a + b <= c || a + c <= b || c + b <= a) {
+                System.out.println("Not a triangle!");
+                System.out.println("Assigning default values of [1, 1, 1]");
+                this.a = 1;
+                this.b = 1;
+                this.c = 1;
+            }
+
+            else {
                 this.a = a;
                 this.b = b;
                 this.c = c;

@@ -2,13 +2,18 @@ package lesson_shapes;
 
 public class  ShapeMain {
     public static void main(String[] args) {
+//        checkRectangles();
+//        checkCircles();
+        checkTriangles(10);
+
+    }
+
+    private static void checkRectangles() {
+
         Shape shape1 = new Rectangle(4, 5);
-        if (shape1 instanceof Rectangle) {
-            Rectangle rectangle = (Rectangle) shape1;
-            System.out.println("shape 1 is square: " + rectangle.isSquare());
-            System.out.println("Area = " + rectangle.area());
-            System.out.println("Perimeter = " + rectangle.perimeter() + "\n");
-        }
+        System.out.println("shape 1 is square: " + ((Rectangle) shape1).isSquare());
+        System.out.println("Area = " + ((Rectangle) shape1).area());
+        System.out.println("Perimeter = " + ((Rectangle) shape1).perimeter() + "\n");
 
         Shape shape2 = new Rectangle(4, 4);
         System.out.println("shape 2 is square: " + ((Rectangle) shape2).isSquare());
@@ -30,6 +35,9 @@ public class  ShapeMain {
         System.out.println("Area = " + ((Rectangle) shape5).area());
         System.out.println("Perimeter = " + ((Rectangle) shape5).perimeter() + "\n");
 
+    }
+
+    private static void checkCircles() {
         Shape shape6 = new Circle(5);
         System.out.println("shape 6 is circle: " + ((Circle) shape6).isCircle());
         System.out.println("Area = " + ((Circle) shape6).area());
@@ -39,15 +47,15 @@ public class  ShapeMain {
         System.out.println("shape 7 is circle: " + ((Circle) shape7).isCircle());
         System.out.println("Area = " + ((Circle) shape7).area());
         System.out.println("Perimeter = " + ((Circle) shape7).perimeter() + "\n");
+    }
 
-        Shape shape8 = new Triangle(0, 5, 7);
-        System.out.println("shape 8 is triangle: " + ((Triangle) shape8).isTriangle());
-        System.out.println("Area = " + ((Triangle) shape8).area());
-        System.out.println("Perimeter = " + ((Triangle) shape8).perimeter() + "\n");
+    private static void checkTriangles(int count) {
 
-        Shape shape9 = new Triangle(7, 10, 5);
-        System.out.println("shape 9 is triangle: " + ((Triangle) shape9).isTriangle());
-        System.out.println("Area = " + ((Triangle) shape9).area());
-        System.out.println("Perimeter = " + ((Triangle) shape9).perimeter() + "\n");
+        for (int i = 0; i < count; i++) {
+            Shape shape8 = new Triangle(Math.random () * 10 - 2, Math.random () * 10 - 2, Math.random () * 10 - 2);
+            System.out.println("shape" + i + " is triangle: " + ((Triangle) shape8).isTriangle());
+            System.out.println("Area = " + ((Triangle) shape8).area());
+            System.out.println("Perimeter = " + ((Triangle) shape8).perimeter() + "\n");
+        }
     }
 }
