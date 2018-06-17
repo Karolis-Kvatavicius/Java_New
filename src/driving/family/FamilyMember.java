@@ -1,6 +1,6 @@
 package driving.family;
 
-public abstract class FamilyMember {
+public abstract class FamilyMember implements Driver {
     private final String name;
     private final int age;
 
@@ -15,6 +15,7 @@ public abstract class FamilyMember {
     public int getAge() {
         return age;
     }
+
 }
 
 
