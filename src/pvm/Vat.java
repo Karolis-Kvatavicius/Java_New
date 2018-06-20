@@ -2,6 +2,7 @@ package pvm;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import static java.math.BigDecimal.valueOf;
 
 public class Vat {
     public static void main(String args[]) {
@@ -13,25 +14,18 @@ public class Vat {
 
     private static void printReceipt(int quantity, BigDecimal totalAmount) {
 
-        BigDecimal totalAmountRounded = totalAmount.setScale(2, RoundingMode.HALF_UP);
 
-        double pcsPrice = ((totalAmount.doubleValue() / 121 * 100) / quantity);
-        BigDecimal pcsPriceRounded = new BigDecimal(pcsPrice);
-        pcsPriceRounded = pcsPriceRounded.setScale(2, RoundingMode.HALF_UP);
+        BigDecimal pcsPrice = totalAmount.setScale(4).divide(valueOf(121), RoundingMode.HALF_UP).multiply(valueOf(100).divide(valueOf(quantity)));
+
+        BigDecimal sumWithoutVat = totalAmount.setScale(4).divide(valueOf(121), RoundingMode.HALF_UP).multiply(valueOf(100));
+
+        BigDecimal vat = totalAmount.setScale(2, RoundingMode.HALF_UP).subtract(sumWithoutVat);
 
 
-        double sumWithoutVat = (totalAmount.doubleValue() / 121 * 100);
-        BigDecimal sumWithoutVatRounded = new BigDecimal(sumWithoutVat);
-        sumWithoutVatRounded = sumWithoutVatRounded.setScale(2, RoundingMode.HALF_UP);
-
-        double vat = totalAmount.doubleValue() - sumWithoutVat;
-        BigDecimal vatRounded = new BigDecimal(vat);
-        vatRounded = vatRounded.setScale(2, RoundingMode.HALF_UP);
-
-        System.out.println("\nVieneto kaina be PVM: " + pcsPriceRounded);
-        System.out.println("Kiekis: " + quantity);
-        System.out.println("Suma be PVM: " + sumWithoutVatRounded);
-        System.out.println("PVM suma: " + vatRounded);
-        System.out.println("Viso suma su PVM: " + totalAmountRounded);
+        System.out.println("\n" + String.format("Vieneto kaina be PVM: %.2f €", pcsPrice));
+        System.out.println("Kiekis: " + quantity + " vnt");
+        System.out.println(String.format("Suma be PVM: %.2f €", sumWithoutVat));
+        System.out.println(String.format("PVM suma: %.2f €", vat));
+        System.out.println(String.format("Viso suma su PVM: %.2f €", totalAmount));
     }
 }
