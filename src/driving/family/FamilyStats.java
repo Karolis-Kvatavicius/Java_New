@@ -8,22 +8,22 @@ public class FamilyStats {
     }
 
 
-    public static void membersCount() {
+    public void membersCount() {
         System.out.println("Members: " + stats.length);
     }
 
-    public static void driversCount() {
+    public void driversCount() {
         int a = 0;
         for(int i = 0; i < stats.length; i++) {
 
-            if(stats[i].canDriveCar() == true || stats[i].canRideBike() == true) {
+            if(stats[i].canDriveCar() == true) {
                a++;
             }
         }
-        System.out.println("Can drive car or bike: " + a);
+        System.out.println("Can drive car: " + a);
     }
 
-    public static void canDriveAllCount() {
+    public void canDriveAllCount() {
         int a = 0;
         for(int i = 0; i < stats.length; i++) {
 
@@ -34,7 +34,7 @@ public class FamilyStats {
         System.out.println("Can drive car and bike: " + a);
     }
 
-    public static void oldest() {
+    public void oldest() {
         int a = 0;
         String b = " ";
 
@@ -48,7 +48,7 @@ public class FamilyStats {
         System.out.println("Oldest in family: " + b + " " + a);
     }
 
-    public static void ageMean() {
+    public void ageMean() {
 
         double a = 0;
 
