@@ -1,9 +1,13 @@
 package lesson_shapes;
 
-class Circle implements Shape {
-    private double r;
+import java.util.Comparator;
 
-    public Circle(double r) {
+
+class Circle implements Shape, Comparable<Circle> {
+    private String name;
+    private int r;
+
+    public Circle(int r) {
         this.r = r;
     }
 
@@ -17,8 +21,19 @@ class Circle implements Shape {
         return 2 * Math.PI * r;
     }
 
-    public double getRadius() {
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    public int getRadius() {
         return r;
+    }
+
+    @Override
+    public int compareTo(Circle otherCircle) {
+        return 0;
+
     }
 
 }

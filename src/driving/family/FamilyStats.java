@@ -20,7 +20,7 @@ public class FamilyStats {
                a++;
             }
         }
-        System.out.println("Can drive car: " + a);
+        System.out.println("Can drive car_udemy_polymorphism: " + a);
     }
 
     public void canDriveAllCount() {
@@ -31,7 +31,7 @@ public class FamilyStats {
                 a++;
             }
         }
-        System.out.println("Can drive car and bike: " + a);
+        System.out.println("Can drive car_udemy_polymorphism and bike: " + a);
     }
 
     public void oldest() {

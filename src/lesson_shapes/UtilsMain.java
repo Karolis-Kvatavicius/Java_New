@@ -30,11 +30,11 @@ class UtilsMain {
         System.out.println("Circle area: " + CircleUtils.getArea(circle));
         System.out.println("Circle perimeter: " + CircleUtils.getPerimeter(circle));
 
-        Rectangle rectangle = new Rectangle(2, 2.5);
+        Rectangle rectangle = new Rectangle("rectangl", 2, 2.5);
         System.out.println("Rectangle area: " + RectangleUtils.getArea(rectangle));
         System.out.println("Rectangle perimeter: " + RectangleUtils.getPerimeter(rectangle));
 
-        Triangle triangle = new Triangle(2, 2.5, 4);
+        Triangle triangle = new Triangle("td",2, 2.5, 4);
         System.out.println("Triangle area: " + TriangleUtils.getArea(triangle));
         System.out.println("Triangle perimeter: " + TriangleUtils.getPerimeter(triangle) + "\n");
     }
@@ -43,9 +43,9 @@ class UtilsMain {
         Shape shape = new Circle(2);
         ShapeUtils.printArea(shape);
 
-        Rectangle rectangle = new Rectangle(1, 2);
+        Rectangle rectangle = new Rectangle("rectangl1", 1, 2);
         ShapeUtils.printArea(rectangle);
 
-        ShapeUtils.printArea(new Triangle(3, 2, 3));
+        ShapeUtils.printArea(new Triangle("as",3, 2, 3));
     }
 }

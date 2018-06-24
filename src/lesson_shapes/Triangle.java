@@ -1,14 +1,20 @@
 package lesson_shapes;
 
-class Triangle implements Shape {
+//       2. Klasę Triangle papildyti interfeisu Comparable ir implementuoti trikampių lyginimą taip, kad laikitume trikampį didesniu, jei jo plotas yra didesnis.
+//        Patikrinti veikimą su keliais skirtingais trikampiais (lyginti poras).
+
+class Triangle implements Shape, Comparable<Triangle>  {
+    private String name;
     private double x;
     private double y;
     private double z;
 
-    Triangle(double x, double y, double z) {
+    Triangle(String name, double x, double y, double z) {
+        this.name = name;
         this.x = x;
         this.y = y;
         this.z = z;
+
     }
 
     @Override
@@ -32,5 +38,21 @@ class Triangle implements Shape {
 
     public double getZ() {
         return z;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public int compareTo(Triangle t2) {
+        if(this.area() > t2.area()) {
+            System.out.println(this.getName() + " is of bigger area than " + t2.getName());
+        } else if(this.area() < t2.area()) {
+            System.out.println(this.getName() + " is of smaller area than " + t2.getName());
+        } else if(this.area() == t2.area()) {
+            System.out.println(this.getName() + " and " + t2.getName() + " are of equal areas.");
+        }
+        return 0;
     }
 }

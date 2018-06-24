@@ -4,6 +4,7 @@ interface Shape {
 
     double area();
     double perimeter();
+    String getName();
 
     default void printArea() {
         System.out.println(area());
