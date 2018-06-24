@@ -22,9 +22,9 @@ public class ShapeMain {
 
         ShapePolymoTest test = new ShapePolymoTest();
 
-        Shape circle = new Circle(5);
-        Circle circle2 = new Circle(2);
-        Circle circle3 = new Circle(10);
+        Shape circle = new Circle(5, "circle");
+        Circle circle2 = new Circle(2, "circle2");
+        Circle circle3 = new Circle(10, "circle3");
 
         List<Shape> circles = new ArrayList<>();
         circles.add(circle);
@@ -61,11 +61,28 @@ public class ShapeMain {
         shapeList.add(circle2);
         shapeList.add(circle3);
 
+        List<Shape> shapeList2 = new ArrayList<>(shapeList);
+        for(int i = 0; i < shapeList2.size(); i++) {
+            System.out.println( shapeList2.get( i ).area() + " " + shapeList2.get( i ).getName());
+        }
 
         ShapeComparator shapesComparator = new ShapeComparator();
+        Collections.sort(shapeList2, shapesComparator);
+        System.out.println();
+
+
+        for(int i = 0; i < shapeList2.size(); i++) {
+            System.out.println( shapeList2.get( i ).area() + " " + shapeList2.get( i ).getName());
+        }
+
         //Collections.sort(shapeList, shapesComparator);
 
-        System.out.println(Arrays.deepToString(shapeList.toArray()));
+
+
+        //shapesComparator.compare( shapeList, shapeList );
+
+
+        //System.out.println(Arrays.deepToString(shapeList.toArray()));
 
 
 

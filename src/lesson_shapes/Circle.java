@@ -7,8 +7,14 @@ class Circle implements Shape, Comparable<Circle> {
     private String name;
     private int r;
 
+    public Circle(int r, String name) {
+        this.r = r;
+        this.name = name;
+    }
+
     public Circle(int r) {
         this.r = r;
+        this.name = "Unnamed circle";
     }
 
     @Override

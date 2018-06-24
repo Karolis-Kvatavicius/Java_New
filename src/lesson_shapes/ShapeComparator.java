@@ -4,20 +4,22 @@ package lesson_shapes;
 //        Sukurkite HashSet'ą su skirtingomis figūromis (apskritimai, stačiakampiai, trikampiai) ir surūšiuokite jas naudojant ShapeComparator logiką.
 //        Atspausdinkite elementus prieš ir po rikiavimo abiem atvejais.
 
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 
 public class ShapeComparator implements Comparator<Shape> {
 
 
+//    didejimo tvarka rikiavimas neveikia tvarkingai
     @Override
-    public int compare(Shape s1, Shape s2) {
-        if(s1.area() > s2.area()) {
-            System.out.println(s1.getName() + " is of bigger area than " + s2.getName());
-        } else if(s1.area() < s2.area()) {
-            System.out.println(s1.getName() + " is of smaller area than " + s2.getName());
-        } else if(s1.area() == s2.area()) {
-            System.out.println(s1.getName() + " and " + s2.getName() + " are of equal areas.");
-        }
+    public int compare(Shape o1, Shape o2) {
+
+           if (o1.area() > o2.area()) {
+
+               return (int) (o2.area() - o1.area());
+           }
+
         return 0;
     }
 }
