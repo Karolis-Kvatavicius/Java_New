@@ -7,7 +7,7 @@ public class BurgerMain {
     Scanner scanner = new Scanner(System.in);
 
     while(0 < 1) {
-        System.out.println( "Enter a type of burger you want: " );
+        System.out.println( "Enter a type of burger you want (Basic, Healthy or Deluxe): " );
         String input = scanner.nextLine();
 
         if (input.equals( "Basic" )) {
