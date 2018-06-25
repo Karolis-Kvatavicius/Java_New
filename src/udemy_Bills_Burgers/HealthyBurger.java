@@ -13,6 +13,13 @@ public class HealthyBurger extends BasicHamburger {
         return price;
     }
 
+    public HealthyBurger() {
+        super( false, false, false, false );
+        this.burgerRollType = "brown rye bread roll";
+        this.salad = false;
+        this.fetaCheese = false;
+    }
+
     public HealthyBurger(boolean tomatoes, boolean pickles, boolean onion, boolean mustard, boolean salad, boolean fetaCheese) {
         super( tomatoes, pickles, onion, mustard);
         this.burgerRollType = "brown rye bread roll";

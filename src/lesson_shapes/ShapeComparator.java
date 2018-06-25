@@ -4,9 +4,8 @@ package lesson_shapes;
 //        Sukurkite HashSet'ą su skirtingomis figūromis (apskritimai, stačiakampiai, trikampiai) ir surūšiuokite jas naudojant ShapeComparator logiką.
 //        Atspausdinkite elementus prieš ir po rikiavimo abiem atvejais.
 
-import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.List;
+
 
 public class ShapeComparator implements Comparator<Shape> {
 
