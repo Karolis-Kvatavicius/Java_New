@@ -11,7 +11,7 @@ public class BurgerMain {
         String input = scanner.nextLine();
 
         if (input.equals( "Basic" )) {
-            System.out.println( "Do you want tomatoes, pickles, onion, mustard added?. Write true or false for each item accordingly." );
+            System.out.println( "Do you want tomatoes, pickles, onion, mustard added?. Write true or false for each item accordingly. Typos count as false" );
             new BasicHamburger( Boolean.valueOf( scanner.nextLine() ), Boolean.valueOf( scanner.nextLine() ), Boolean.valueOf( scanner.nextLine() ), Boolean.valueOf( scanner.nextLine() ) ).printBasicBurger();
 
         } else if (input.equals( "Deluxe" )) {
@@ -19,16 +19,16 @@ public class BurgerMain {
 
 
         } else if (input.equals( "Healthy" )) {
-            System.out.println( "Do you want tomatoes, pickles, onion, mustard, salad, feta cheese added?. Write true or false for each item accordingly." );
+            System.out.println( "Do you want tomatoes, pickles, onion, mustard, salad, feta cheese added?. Write true or false for each item accordingly. Typos count as false" );
             new HealthyBurger( Boolean.valueOf( scanner.nextLine() ), Boolean.valueOf( scanner.nextLine() ), Boolean.valueOf( scanner.nextLine() ), Boolean.valueOf( scanner.nextLine() ), Boolean.valueOf( scanner.nextLine() ), Boolean.valueOf( scanner.nextLine() ) ).printBasicBurger();
 
         }
         System.out.println();
     }
 
-//    BasicHamburger basicHamburger2 = new BasicHamburger(false, true, true, true);
+//    DeluxeBurger basicHamburger2 = new DeluxeBurger();
 //    basicHamburger2.printBasicBurger();
-//    System.out.println();
+//    System.out.println(basicHamburger2.getBurgerRollType());
 
 //    HealthyBurger healthyBurger1 = new HealthyBurger(true, true, false, true, true, true);
 //    healthyBurger1.printBasicBurger();

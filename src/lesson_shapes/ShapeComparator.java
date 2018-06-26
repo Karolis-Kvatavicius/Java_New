@@ -14,11 +14,11 @@ public class ShapeComparator implements Comparator<Shape> {
     @Override
     public int compare(Shape o1, Shape o2) {
 
-           if (o1.area() > o2.area()) {
+//           if (o1.area() > o2.area()) {
 
                return (int) (o2.area() - o1.area());
-           }
+//           }
 
-        return 0;
+//        return 0;
     }
 }

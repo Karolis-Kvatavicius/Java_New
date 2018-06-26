@@ -12,6 +12,9 @@ public class BasicHamburger {
     public double getPrice() {
         return price;
     }
+    public String getBurgerRollType() {
+        return burgerRollType;
+    }
 
     public void printBasicBurger() {
         System.out.println("Base price: " + new BasicHamburger().getPrice() + " $");

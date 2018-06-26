@@ -13,6 +13,10 @@ public class HealthyBurger extends BasicHamburger {
         return price;
     }
 
+    public String getBurgerRollType() {
+        return burgerRollType;
+    }
+
     public HealthyBurger() {
         super( false, false, false, false );
         this.burgerRollType = "brown rye bread roll";

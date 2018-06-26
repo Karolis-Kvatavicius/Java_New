@@ -28,7 +28,7 @@ public class CarMain2 {
         car5.gearbox = "automatic";
         car5.maxspeed = 250;
 
-        // rasti auto, kurios greitis didziausias ir atspausdint tą greitį kartu su auto pavadinimu
+        // rasti auto_comparator, kurios greitis didziausias ir atspausdint tą greitį kartu su auto_comparator pavadinimu
 
         if(car1.maxspeed > car2.maxspeed && car1.maxspeed > car3.maxspeed && car1.maxspeed > car4.maxspeed &&
                 car1.maxspeed > car5.maxspeed) {
@@ -52,7 +52,7 @@ public class CarMain2 {
         }
 
 
-        // suskaiciuojami auto su mechanine pavaru deze ir atspausdinamas ju kiekis
+        // suskaiciuojami auto_comparator su mechanine pavaru deze ir atspausdinamas ju kiekis
         int manualCount = 0;
         if(car1.gearbox.equals("manual")) {
             manualCount++;
@@ -72,7 +72,7 @@ public class CarMain2 {
         System.out.println("\nCars with manual transmission: " + manualCount);
 
 
-        // suskaiciuojami auto su automatine pavaru deze ir atspausdinamas ju kiekis
+        // suskaiciuojami auto_comparator su automatine pavaru deze ir atspausdinamas ju kiekis
         int autoCount = 0;
         if(car1.gearbox.equals("automatic")) {
             autoCount++;
