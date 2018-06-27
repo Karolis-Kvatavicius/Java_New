@@ -1,8 +1,9 @@
 package auto_comparator;
 
 public class Owner {
-    private String ownerName;
     private String ownerSurname;
+    private String ownerName;
+
 
     public Owner(String ownerName, String ownerSurname) {
         this.ownerName = ownerSurname;

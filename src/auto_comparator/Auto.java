@@ -1,11 +1,13 @@
 package auto_comparator;
 
-public class Auto extends Owner {
+public class Auto {
     private String licenceNumber;
     private String manufacturer;
+    private Owner owner;
 
-    public Auto(String ownerSurname, String ownerName, String licenceNumber, String manufacturer) {
-        super( ownerSurname, ownerName );
+    public Auto(Owner owner, String licenceNumber, String manufacturer) {
+
+        this.owner = owner;
         this.licenceNumber = licenceNumber;
         this.manufacturer = manufacturer;
     }
@@ -13,8 +15,8 @@ public class Auto extends Owner {
 
     @Override
     public String toString() {
-        return "\nOwner surname - " + getOwnerSurname() + ", " +
-               "Owner name - " + getOwnerName() + ", " +
+        return "\nOwner surname - " + getOwner().getOwnerSurname() + ", " +
+               "Owner name - " + getOwner().getOwnerName() + ", " +
                "Licence Number - " + getLicenceNumber() + "\n";
     }
 
@@ -22,4 +24,7 @@ public class Auto extends Owner {
         return licenceNumber;
     }
 
+    public Owner getOwner() {
+        return owner;
+    }
 }
