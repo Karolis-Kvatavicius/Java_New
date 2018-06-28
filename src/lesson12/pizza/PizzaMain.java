@@ -5,11 +5,12 @@ public class PizzaMain {
     public static void main(String[] args) {
 
         Pizza salami = new Pizza("Pepperoni");
-        Sauce salamiSauce = Sauce.valueOf("MILD");
+        Sauce salamiSauce = Sauce.MILD;
 
         Box<Pizza, Sauce> box1 = new Box<>();
         box1.setValue(salami, salamiSauce);
         box1.printBoxContents();
+
     }
 
 }
