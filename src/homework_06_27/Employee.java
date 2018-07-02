@@ -22,5 +22,4 @@ public class Employee {
     public String getOccupation() {
         return occupation;
     }
-
 }

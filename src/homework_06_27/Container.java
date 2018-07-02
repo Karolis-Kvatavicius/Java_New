@@ -16,9 +16,11 @@ package homework_06_27;
 //        System.out.println(emp);
 //        }
 
+import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 
-public class Container<E> {
+public class Container<E> implements Iterable {
 
     private List<E> employees;
 
@@ -26,19 +28,21 @@ public class Container<E> {
         this.employees = employees;
     }
 
-    public Container() {
-
-    }
-
-    public void setValue(List<E> employees) {
-        this.employees = employees;
+    public Container<E> order(Comparator<? super E> c) {
+        employees.sort(c);
+        return this;
     }
 
     public List<E> getEmployees() {
         return employees;
     }
 
-//    public void printContents() {
-//        System.out.println(getEmployees().getName());
-//    }
+    @Override
+    public Iterator<E> iterator() {
+//        Iterator<E> employeesIterator = this.employees.iterator();
+//        while (employeesIterator.hasNext()) {
+          return employees.iterator();
+//        }
+//        return employeesIterator;
+    }
 }

@@ -1,28 +1,41 @@
 package homework_06_27;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static java.util.Collections.reverseOrder;
+import static java.util.Objects.compare;
 
 public class Main {
     public static void main(String[] args) {
 
-        Container<Employee> workplace = new Container<>();
-        workplace.getEmployees().add( new Employee( "Petras", 45, "Direktorius" ));
-        workplace.getEmployees().add( new Employee( "Nijole", 29, "Marketingo specialiste" ) );
-        workplace.getEmployees().add( new Employee( "Jonas", 32, "Vadybininkas" ) );
-        workplace.getEmployees().add( new Employee( "Algis", 30, "Vairuotojas" ) );
+        Container<Employee> workplace = new Container<>(new ArrayList<>());
+        List<Employee> employeeList = workplace.getEmployees();
 
-        for (Employee e: workplace.getEmployees() ) {
-            System.out.println(e);
+        employeeList.add( new Employee( "Petras", 45, "Direktorius" ));
+        employeeList.add( new Employee( "Nijole", 29, "Marketingo specialiste" ) );
+        employeeList.add( new Employee( "Jonas", 32, "Vadybininkas" ) );
+        employeeList.add( new Employee( "Algis", 30, "Vairuotojas" ) );
+
+        for (Employee emp: employeeList) {
+            System.out.println(String.valueOf(emp.getAge()) + " " + emp.getName() + " - " + emp.getOccupation());
+        }
+        System.out.println();
+
+        Collections.sort(employeeList, (e1, e2) -> e1.getAge() - e2.getAge() );
+
+        for (Employee emp: employeeList) {
+            System.out.println(String.valueOf(emp.getAge()) + " " + emp.getName() + " - " + emp.getOccupation());
+        }
+        System.out.println();
+
+        Collections.sort(employeeList, (e1, e2) -> e2.getOccupation().compareTo(e1.getOccupation()));
+
+        for (Employee emp: employeeList) {
+            System.out.println(String.valueOf(emp.getAge()) + " " + emp.getName() + " - " + emp.getOccupation());
         }
 
-
-//        Collections.sort(workplace.getEmployees(), (o1, o2) -> {return o1.getAge() - o2.getAge()});
-//        for (Employee emp :  ) {
-//            System.out.println(String.valueOf(emp.getAge()) + " " + emp.getName() + " " + emp.getOccupation() );
+//        for (Employee emp : workplace.order((e1, e2) -> e2.getAge() - e1.getAge()) ) {
+//            System.out.println(emp);
 //        }
 
     }
