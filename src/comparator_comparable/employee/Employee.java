@@ -12,17 +12,17 @@ import static java.lang.String.format;
 
 
 
-    /**
-     * Tarkime turime klasę Employee ir jos vidinę klasę Address.
-     * Tegul klasėje Employee turime du laukus - String name ir
-     * Address address, o Address klasė turi laukus - String city,
-     * String address.
-     * <p>
-     * Sukurkite keletą darbuotojų su vardu ir adresu ir pabandykit
-     * nustatyti iš kiek skirtingų miestų yra darbuotojai.
-     * <p>
-     * Išvesti miestų pavadinimus su darbuotojų skaičiumi (panaudoti Map interfeisą).
-     */
+//    /**
+//     * Tarkime turime klasę Employee ir jos vidinę klasę Address.
+//     * Tegul klasėje Employee turime du laukus - String name ir
+//     * Address address, o Address klasė turi laukus - String city,
+//     * String address.
+//     * <p>
+//     * Sukurkite keletą darbuotojų su vardu ir adresu ir pabandykit
+//     * nustatyti iš kiek skirtingų miestų yra darbuotojai.
+//     * <p>
+//     * Išvesti miestų pavadinimus su darbuotojų skaičiumi (panaudoti Map interfeisą).
+//     */
 
     class Employee {
         String name;
